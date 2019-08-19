@@ -1,0 +1,6 @@
+venv/
+docs/_build/
+_build/
+docs/errors.txt
+testenv_symbols/
+testenv-*.log
