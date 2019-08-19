@@ -552,6 +552,6 @@ Once the workflow is successful verify that configuration has been deleted from 
 
 .. note::
    
-   `Click here <https://github.com/f5devcentral/f5-aci-labs/tree/prod/docs/pure_ansible/ansible_playbooks/cleanup>`_ to view playbooks for delete workflow
+   `Click here <https://github.com/f5devcentral/f5-aci-labs/tree/stage/docs/pure_ansible/ansible_playbooks/cleanup>`_ to view playbooks for delete workflow
       
 **This brings us to the end of the Lab**

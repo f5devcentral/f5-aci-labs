@@ -238,7 +238,7 @@ Playbook details:
 
 - There are templates defined using Jinga2 templating. For information on jinga2 refer to: https://jinja.palletsprojects.com/en/2.10.x/
 
-  - Take a look at one example of the jinja2 we are going to be using. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/prod/docs/pure_ansible/ansible_playbooks/ldev.j2>'_ 
+  - Take a look at one example of the jinja2 we are going to be using. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/stage/docs/pure_ansible/ansible_playbooks/ldev.j2>`_ 
   
   - There is one jinja2 template for each object that is to be created in the APIC
   
@@ -318,7 +318,7 @@ Rest all of the parameters same as before
 
 |
 
-Take a look at the code. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/prod/docs/pure_ansible/ansible_playbooks/bigip_configure_network.yml>`_ before proceeding. There are comments in the playbook to help understand the flow
+Take a look at the code. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/stage/docs/pure_ansible/ansible_playbooks/bigip_configure_network.yml>`_ before proceeding. There are comments in the playbook to help understand the flow
 
 Second job template
 
@@ -334,7 +334,7 @@ Rest all of the paramters same as before
 
 |
 
-Take a look at the code. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/prod/docs/pure_ansible/ansible_playbooks/bigip_configure_application.yml>'_ before proceeding. There are comments in the playbook to help understand the flow
+Take a look at the code. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/stage/docs/pure_ansible/ansible_playbooks/bigip_configure_application.yml>`_ before proceeding. There are comments in the playbook to help understand the flow
 
 Creating workflow
 -----------------
