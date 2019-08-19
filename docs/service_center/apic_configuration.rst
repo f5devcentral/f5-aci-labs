@@ -258,9 +258,9 @@ Click FINISH
 
 .. note ::
 
-   There is no F5 BIG-IP related configuration.
-
    The above steps will complete the network stitching on the ACI side.
+   
+   No F5 BIG-IP related configuration.
 
 Verify the deployment
 `````````````````````
