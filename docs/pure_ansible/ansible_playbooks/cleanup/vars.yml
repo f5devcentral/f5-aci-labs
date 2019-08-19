@@ -1,0 +1,13 @@
+tenant_name: "SJC"
+consumerBD_name: "externalBD"
+providerBD_name: "internalBD"
+
+appProfile_name: "AppProfile"
+consumerEPG_name: "externalEPG"
+providerEPG_name: "internalEPG"
+
+SGtemplate_name: "SGT_BIGIP_VE"
+contract_name: "Unmanaged-2ARM-Contract"
+
+#Virtual
+logicalDeviceCluster_name: "BIGIP-VE-Standalone"

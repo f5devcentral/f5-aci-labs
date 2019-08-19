@@ -271,7 +271,7 @@ htmlhelp_basename = 'F5_ACI_Lab_doc'
 
 # -- Options for linkcheck ------------------------------------------------
 # A list of regular expressions that match URIs that should not be checked when doing a linkcheck build. Example:
-#linkcheck_ignore = [r'http://localhost:\d+/']
+linkcheck_ignore = [r'http://localhost']
 
 # The number of times the linkcheck builder will attempt to check a URL before declaring it broken. Defaults to 1 attempt.
 linkcheck_retries = 2

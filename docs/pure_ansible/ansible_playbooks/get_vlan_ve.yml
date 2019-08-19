@@ -1,0 +1,33 @@
+- name: Configure BIG-IP
+  hosts: aci
+  connection: local
+  gather_facts: false
+
+  vars:
+   vlan_encap: []
+   tenant_name: "LAX"
+   contract_name: "BIGIP-VE-Standalone-Contract"
+   SGtemplate_name: "2ARM-Template"
+
+  tasks:
+
+  - name: Get VLAN information from deployed graph
+    aci_rest:
+      action: "get"
+      uri: "/api/node/mo/uni/tn-{{tenant_name}}/GraphInst_C-[uni/tn-{{tenant_name}}/brc-{{contract_name}}]-G-[uni/tn-{{tenant_name}}/AbsGraph-{{SGtemplate_name}}]-S-[uni/tn-{{tenant_name}}]/NodeInst-N1.json?query-target=subtree&target-subtree-class=vnsEPgDef"
+      host: "{{inventory_hostname}}"
+      username: '{{ lookup("env", "ANSIBLE_NET_USERNAME") }}'
+      password: '{{ lookup("env", "ANSIBLE_NET_PASSWORD") }}'
+      validate_certs: "false"
+    register: vlans
+
+  - name: Display complete output
+    debug: msg="{{vlans}}"
+
+  - set_fact:
+      vlan_encap: "{{ vlan_encap|default([]) + [ {'name': item.name, 'encap': item.encap.split('-')[1] }] }}"
+    loop: "{{vlans | json_query(query_string)}}"
+    vars:
+     query_string: "imdata[*].vnsEPgDef.attributes"
+
+  - debug: "msg={{vlan_encap}}"

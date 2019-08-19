@@ -1,0 +1,14 @@
+<vnsLDevVip trunking="no" svcType="ADC" promMode="no" packageModel="" nameAlias="" name="{{logicalDeviceCluster_name}}" mode="legacy-Mode" managed="no" isCopy="no" funcType="GoTo" dn="uni/tn-{{tenant_name}}/lDevVip-{{logicalDeviceCluster_name}}" devtype="VIRTUAL" contextAware="single-Context" annotation="">
+  <vnsRsALDevToDomP annotation="" tDn="uni/vmmp-VMware/dom-My-vCenter" switchingMode="native"/>
+  <vnsLIf nameAlias="" name="External" annotation="" encap="unknown">
+    <vnsRsCIfAttN annotation="" tDn="uni/tn-{{tenant_name}}/lDevVip-{{logicalDeviceCluster_name}}/cDev-Device1/cIf-[External]"/>
+  </vnsLIf>
+  <vnsLIf nameAlias="" name="Internal" annotation="" encap="unknown">
+    <vnsRsCIfAttN annotation="" tDn="uni/tn-{{tenant_name}}/lDevVip-{{logicalDeviceCluster_name}}/cDev-Device1/cIf-[Internal]"/>
+  </vnsLIf>
+  <vnsCDev nameAlias="" name="Device1" annotation="" vmName="BIGIP1-VM" vcenterName="dCloud-DC" isTemplate="no" isCloneOperation="no" host="" devCtxLbl="" cloneCount="0">
+    <vnsRsCDevToCtrlrP annotation="" tDn="uni/vmmp-VMware/dom-My-vCenter/ctrlr-dCloud-DC"/>
+    <vnsCIf nameAlias="" name="External" annotation="" vnicName="Network adapter 2"/>
+    <vnsCIf nameAlias="" name="Internal" annotation="" vnicName="Network adapter 3"/>
+  </vnsCDev>
+</vnsLDevVip>

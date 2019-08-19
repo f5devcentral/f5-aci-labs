@@ -1,0 +1,13 @@
+<vnsLDevCtx nodeNameOrLbl="N1" nameAlias="" name="" graphNameOrLbl="2ARM-Template" dn="uni/tn-{{tenant_name}}/ldevCtx-c-{{logicalDeviceCluster_name}}-Contract-g-2ARM-Template-n-N1" descr="" ctrctNameOrLbl="{{logicalDeviceCluster_name}}-Contract" context="" annotation="">
+  <vnsRsLDevCtxToLDev annotation="" tDn="uni/tn-{{tenant_name}}/lDevVip-{{logicalDeviceCluster_name}}"/>
+  <vnsLIfCtx nameAlias="" name="" descr="" annotation="" permitLog="no" l3Dest="yes" connNameOrLbl="consumer">
+    <vnsRsLIfCtxToLIf annotation="" tDn="uni/tn-{{tenant_name}}/lDevVip-{{logicalDeviceCluster_name}}/lIf-External"/>
+    <vnsRsLIfCtxToCustQosPol annotation="" tnQosCustomPolName=""/>
+    <vnsRsLIfCtxToBD annotation="" tDn="uni/tn-{{tenant_name}}/BD-Consumer-BD"/>
+  </vnsLIfCtx>
+  <vnsLIfCtx nameAlias="" name="" descr="" annotation="" permitLog="no" l3Dest="yes" connNameOrLbl="provider">
+    <vnsRsLIfCtxToLIf annotation="" tDn="uni/tn-{{tenant_name}}/lDevVip-{{logicalDeviceCluster_name}}/lIf-Internal"/>
+    <vnsRsLIfCtxToCustQosPol annotation="" tnQosCustomPolName=""/>
+    <vnsRsLIfCtxToBD annotation="" tDn="uni/tn-{{tenant_name}}/BD-Provider-BD"/>
+  </vnsLIfCtx>
+</vnsLDevCtx>

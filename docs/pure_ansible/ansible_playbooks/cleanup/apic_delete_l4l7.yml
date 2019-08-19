@@ -1,0 +1,31 @@
+- name: Configure ACI
+  hosts: aci
+  connection: local
+  gather_facts: false
+      
+  tasks:
+
+  - name: Create XML POSTS from templates
+    template: src={{ item.src }} dest={{ item.dest }}
+    with_items:
+      - { src: 'delete_ldev.j2',                      dest: 'delete_ldev.xml' }
+      - { src: 'delete_contract.j2',                  dest: 'delete_contract.xml' }
+      - { src: 'delete_service_graph_template.j2',    dest: 'delete_service_graph_template.xml'}
+      - { src: 'delete_deviceSelectionPolicy.j2',     dest: 'delete_deviceSelectionPolicy.xml'}
+      - { src: 'delete_attach_cons_prov_contract.j2', dest: 'delete_attach_cons_prov_contract.xml'}
+
+  - name: Execute POSTS
+    aci_rest:
+      action: "post"
+      uri: "/api/node/mo/uni/tn-{{tenant_name}}.xml"
+      config_file: "{{ item }}"
+      host: "{{inventory_hostname}}"
+      username: '{{ lookup("env", "ANSIBLE_NET_USERNAME") }}'
+      password: '{{ lookup("env", "ANSIBLE_NET_PASSWORD") }}'
+      validate_certs: "false"
+    with_items:
+     - "delete_ldev.xml"
+     - "delete_contract.xml"
+     - "delete_service_graph_template.xml"
+     - "delete_deviceSelectionPolicy.xml"
+     - "delete_attach_cons_prov_contract.xml"

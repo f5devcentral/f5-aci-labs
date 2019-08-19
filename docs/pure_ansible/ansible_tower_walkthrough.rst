@@ -91,7 +91,7 @@ Then click on 'Groups' button on the Top.
 
 |
 
-There is one group 'aci', click on 'aci'. 
+Click on gorup 'aci'
 
 |
 
@@ -99,7 +99,7 @@ There is one group 'aci', click on 'aci'.
 
 |
 
-Then click on 'Hosts'.
+Then click on 'Hosts'
 
 |
 
@@ -178,7 +178,7 @@ For more information view the `white paper on service graph <https://www.cisco.c
 
 A few more items that we are going to configure as part of the service graph
 
-- **Contract**: An administrator uses a contract to select the type(s) of traffic that can pass between EPGs, including the protocols and ports allowed. If there is no contract, inter-EPG communication is disabled by default. There is no contract required for intra-EPG communication; intra-EPG communication is always implicitly allowed.
+- **Contract**: An administrator uses a contract to select the type(s) of traffic that can pass between EPGs, including the protocols and ports allowed. If there is no contract, inter-EPG communication is disabled by default. No contract is required for intra-EPG communication; intra-EPG communication is always implicitly allowed.
 
   - Present under Tenant -> Contracts
   
@@ -390,7 +390,7 @@ You can click on the settings button to change the visual percentage
 
 |
 
-Now the next step is to provide input to the workflow. There are a few variables that are defined in the playbooks we need to provide input for those variables.
+Now the next step is to provide input to the workflow. A few variables that are defined in the playbooks, let's provide input for those variables.
 
 In a workflow we can specify the variables ina text box called as extra variables
 

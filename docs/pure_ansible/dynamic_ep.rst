@@ -24,7 +24,7 @@ So to summarize:
 
 - Endpoints in an endpoint group = Pool members on the BIG-IP ( application servers handling traffic)
 
-So when workload is commissioned/decommisioned it needs to also be added/deleted to a pool member on the BIG-IP.
+When workload is commissioned/decommisioned it needs to also be added/deleted to a pool member on the BIG-IP.
 
 Using ansible lets automate the process.
 
