@@ -68,9 +68,13 @@ Under that project you will notice
 
 - Organization: 'dCloud'
 - SCM type: Git
-- SCM URL: "https://github.com/payalsin/f5_aci_dCloud_ansible.git" << url to fill what we are going to use >> (All the playbooks that are placed in this Git repo will be available in Tower for the user to execute)
+- SCM URL: "https://github.com/f5devcentral/f5-aci-labs.git" (All the playbooks that are placed in this Git repo will be available in Tower for the user to execute)
 - UPDATE REVISION ON LAUNCH - enabled (the Git Repo will be updated everytime a job using this repo is executed)
 
+.. note::
+
+   All playbooks are placed under docs/pure_ansible/ansible_playbooks directory
+   
 |
 
 .. image:: ./_static/tower_project2.png
@@ -211,7 +215,7 @@ Click on 'Templates' on the left hand pane, Click on the green '+' sign on the u
 - Name: 'Configure L4-L7 APIC'
 - Inventory - 'Demo Inventory'
 - Project - 'demo_git_repo'
-- Playbook - 'apic_configure_l4l7.yml'
+- Playbook - 'apic_configure_l4l7.yml' (Look for the playbook name under the dropdown list)
 - Credential - 'apic1' (From the Credential type select 'Network' and then select 'apic1')
 
 |
@@ -234,7 +238,7 @@ Playbook details:
 
 - There are templates defined using Jinga2 templating. For information on jinga2 refer to: https://jinja.palletsprojects.com/en/2.10.x/
 
-  - Take a look at one example of the jinja2 we are going to be using - https://github.com/payalsin/f5_aci_dCloud_ansible/blob/master/ldev.j2
+  - Take a look at one example of the jinja2 we are going to be using. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/prod/docs/pure_ansible/ansible_playbooks/ldev.j2>'_ 
   
   - There is one jinja2 template for each object that is to be created in the APIC
   
@@ -314,7 +318,7 @@ Rest all of the parameters same as before
 
 |
 
-Take a look at the code https://github.com/payalsin/f5_aci_dCloud_ansible/blob/master/bigip_configure_network.yml before proceeding. There are comments in the playbook to help understand the flow
+Take a look at the code. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/prod/docs/pure_ansible/ansible_playbooks/bigip_configure_network.yml>`_ before proceeding. There are comments in the playbook to help understand the flow
 
 Second job template
 
@@ -330,7 +334,7 @@ Rest all of the paramters same as before
 
 |
 
-Take a look at the code https://github.com/payalsin/f5_aci_dCloud_ansible/blob/master/bigip_configure_application.yml before proceeding. There are comments in the playbook to help understand the flow
+Take a look at the code. `Click here <https://github.com/f5devcentral/f5-aci-labs/blob/prod/docs/pure_ansible/ansible_playbooks/bigip_configure_application.yml>'_ before proceeding. There are comments in the playbook to help understand the flow
 
 Creating workflow
 -----------------
