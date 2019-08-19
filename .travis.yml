@@ -32,5 +32,3 @@ deploy:
     branch: prod
     repo: f5devcentral/f5-aci-labs
 
-after_deploy:
-  - aws cloudfront create-invalidation --distribution-id $AWS_DIST_ID --paths $AWS_DIR
