@@ -1,0 +1,47 @@
+- name: Application configuration
+  hosts: aci
+  connection: local
+  gather_facts: false
+
+  tasks:
+
+  - name: Setting up provider values
+    set_fact:
+     provider:
+      server: "{{bigip_ip}}"
+      user: "{{bigip_username}}"
+      password: "{{bigip_password}}"
+      server_port: "443"
+      validate_certs: "False"
+
+  - name: Create pool
+    bigip_pool:
+      provider: "{{provider}}"
+      name: "{{pool_name}}"
+      lb_method: "round-robin"
+      monitors: "/Common/http"
+      monitor_type: "and_list"
+ 
+  - name: Add Virtual Server
+    bigip_virtual_server:
+      provider: "{{provider}}"
+      name: "{{vip_name}}"
+      destination: "{{vip_ip}}"
+      port: "443"
+      profiles:
+      - http
+      - clientssl
+      pool: "{{pool_name}}"
+      snat: "automap"
+  
+  - name: Create a redirect virtual serbver
+    bigip_virtual_server:
+      provider: "{{provider}}"
+      description: "Redirect Virtual server"
+      name: "{{vip_name}}_redirect"
+      destination: "{{vip_ip}}"
+      port: 80
+      profiles:
+      - http
+      all_rules:
+      - _sys_https_redirect

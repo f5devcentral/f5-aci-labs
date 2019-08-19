@@ -1,0 +1,71 @@
+- name: Configure BIG-IP 
+  hosts: aci
+  connection: local
+  gather_facts: false
+
+  vars:
+   vlan_encap: []
+
+  tasks:
+
+  - name: Get VLAN information from deployed graph 
+    aci_rest:
+      action: "get"
+      uri: "/api/node/mo/uni/tn-{{tenant_name}}/GraphInst_C-[uni/tn-{{tenant_name}}/brc-BIGIP-VE-Standalone-Contract]-G-[uni/tn-{{tenant_name}}/AbsGraph-2ARM-Template]-S-[uni/tn-{{tenant_name}}/ctx-VRF-{{tenant_name}}]/NodeInst-N1.json?query-target=subtree&target-subtree-class=vnsEPgDef"
+      host: "{{inventory_hostname}}"
+      username: '{{ lookup("env", "ANSIBLE_NET_USERNAME") }}'
+      password: '{{ lookup("env", "ANSIBLE_NET_PASSWORD") }}'
+      validate_certs: "false"
+    register: vlans
+
+  - name: debug
+    debug: msg="{{vlans}}"
+
+  - set_fact:
+      vlan_encap: "{{ vlan_encap|default([]) + [ {'name': item.name, 'encap': item.encap.split('-')[1] }] }}"
+    loop: "{{vlans | json_query(query_string)}}"
+    vars:
+     query_string: "imdata[*].vnsEPgDef.attributes"
+
+  - debug: "msg={{vlan_encap}}"
+
+  - name: Setting up provider values
+    set_fact:
+     provider:
+      server: "{{bigip_ip}}"
+      user: "{{bigip_username}}"
+      password: "{{bigip_password}}"
+      server_port: "443"
+      validate_certs: "False"
+
+  - name: Delete SELF-IP(s)
+    bigip_selfip:
+     provider: "{{provider}}"
+     name: "{{item.name}}"
+     address: "{{item.address}}"
+     netmask: "{{item.netmask}}"
+     vlan: "{{item.vlan}}"
+     state: absent
+    loop: "{{ selfip_information }}"
+    
+  - name: Delete Provider VLAN
+    bigip_vlan:
+      provider: "{{provider}}"
+      name: "{{item.name}}"
+      tag: "{{item.encap}}"
+      untagged_interfaces:
+      - "{{provider_interface}}"
+      state: absent
+    loop: "{{vlan_encap}}"
+    when: 'item.name == "provider"'
+    
+  - name: Delete Consumer VLAN
+    bigip_vlan:
+      provider: "{{provider}}"
+      name: "{{item.name}}"
+      tag: "{{item.encap}}"
+      untagged_interfaces:
+      - "{{consumer_interface}}"
+      state: absent
+    loop: "{{vlan_encap}}"
+    when: 'item.name == "consumer"'
