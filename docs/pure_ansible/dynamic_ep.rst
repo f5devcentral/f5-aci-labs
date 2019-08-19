@@ -39,6 +39,10 @@ In our environment we are going to be using the following:
 - EPG on APIC => Provider-EPG
 - Pool on BIG-IP => https-pool
 
+.. note::
+
+   All playbooks are placed under docs/pure_ansible/ansible_playbooks directory
+   
 Create a job template 
 ---------------------
 
@@ -47,7 +51,7 @@ Let's go to ansible tower and create a job template with the following parameter
 - Name - 'Dynamic EP'
 - Inventory - 'Demo Inventory'
 - Project - 'demo_git_repo'
-- Playbook - 'dynamic_ep.yml'
+- Playbook - 'dynamic_ep.yml' (Choose the correct playbook from the dropdown list)
 - Credential - 'apic1' (From the Credential type select 'Network' and then select 'apic1')
 
 |
@@ -548,6 +552,6 @@ Once the workflow is successful verify that configuration has been deleted from 
 
 .. note::
    
-   Playbooks for delete workflow are placed here: https://github.com/payalsin/f5_aci_dCloud_ansible/tree/master/cleanup
+   `Click here <https://github.com/f5devcentral/f5-aci-labs/tree/stage/docs/pure_ansible/ansible_playbooks/cleanup>`_ to view playbooks for delete workflow
       
 **This brings us to the end of the Lab**
