@@ -20,7 +20,7 @@ A few points about the BIG-IP being used in this lab:
 
 **Let's Begin by adding the BIG-IP device that we are going to manage using the application**
 
-Open a browser to point to http://localhost:4200 (There is also a shortcut present on the browser as F5 ACI ServiceCenter)   
+Open a browser to point to "http://localhost:4200" (There is also a shortcut present on the browser as F5 ACI ServiceCenter)   
 
 |
 
