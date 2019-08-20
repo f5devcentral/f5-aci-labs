@@ -99,7 +99,7 @@ A device cluster (also known as a logical device) is one or more concrete device
 
 Lets create a BIG-IP Unmanaged L4-L7 device under tenant indicating the BIG-IP VE device we are going to use as well as the interface association
 
-Navigate to Tenant LAX -> L4-L7 Services -> L4-L7 Devices, right click and go to ‘Create L4-L7’ devices
+Navigate to Tenant LAX -> Services -> L4-L7 -> Devices, right click and go to ‘Create L4-L7’ devices
 
 |
  
@@ -189,7 +189,7 @@ inserted between the tiers
 
 Lets create a 2 ARM service graph template with the F5 BIG-IP service in the middle of the service chain
 
-Navigate to Tenant LAX -> L4-L7 Services -> Service Graph Templates, right click and go to ‘Create L4-L7 Service Graph Templates’
+Navigate to Tenant LAX -> Services -> L4-L7 -> Service Graph Templates, right click and go to ‘Create L4-L7 Service Graph Templates’
 
 |
 
@@ -238,7 +238,7 @@ Right click on the service graph template '2ARM-Template' and click on 'Apply L4
 
 |
    
-Select the consumer and provider EPG from the dropdown list as shown below and click next
+Select the consumer and provider EPG from the dropdown list, provide contract name as shown below and click next
 
 |
 
