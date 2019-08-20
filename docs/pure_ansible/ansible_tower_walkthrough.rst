@@ -442,7 +442,7 @@ Executing workflow
    
 Before executing let's login to the APIC and BIG-IP and make sure there is no config to begin with
 
-On the APIC go to Tenant SJC-> L4-L7 services, and look at all the menu options there should be nothing configured
+On the APIC go to Tenant SJC-> Services -> L4-L7, and look at all the menu options there should be nothing configured
 
 |
 
@@ -514,7 +514,7 @@ Verify execution
 APIC
 ````
 
-Login to the APIC and go to Tenant SJC->L4-L7 services, you will see the following configured
+Login to the APIC and go to Tenant SJC-> Services -> L4-L7, you will see the following configured
 
 |
 
