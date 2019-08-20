@@ -158,7 +158,7 @@ html_theme_path = f5_sphinx_theme.get_html_theme_path()
 # documentation.
 #
 html_theme_options = {
-    'next_prev_link': False
+    'next_prev_link': True
 }
 
 html_sidebars = {
@@ -170,12 +170,12 @@ html_sidebars = {
 # "<project> v<release> documentation" by default.
 #
 #html_title = 'F5 Container Connectors'
-html_title = 'F5 ACI Lab'
+html_title = 'F5 ACI Labs'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
 #html_short_title = 'Container Connectors Home'
-html_short_title = 'F5 ACI Lab Home'
+html_short_title = 'F5 ACI Labs Home'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
