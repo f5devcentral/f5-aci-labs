@@ -4,7 +4,7 @@ F5 ACI Labs
 Welcome
 -------
 
-Welcome to the labs for F5's ACI ServiceCenter app.
+Welcome to the labs for F5 and ACI integration solutions.
 
 Below lab(s) are executed using Cisco's dCloud environment. You will need a Cisco CCO account to have access to the below session
 
