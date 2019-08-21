@@ -1,7 +1,7 @@
 F5 ACI ServiceCenter lab Guide
 ==============================
 
-This lab guide will cover the Cisco ACI and F5 BIG-IP integration using the Cisco AppCenter platform.
+This lab guide will cover the Cisco ACI and F5 BIG-IP integration using the Cisco DC App Center platform.
 
 The Cisco App Center platform is an ACI capability where customers, developers, and partners are able to build apps to simplify, enhance, and better visualize their use cases – similar to what is done in mobile world apps today
 
