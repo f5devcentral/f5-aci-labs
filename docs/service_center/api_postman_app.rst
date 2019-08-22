@@ -74,6 +74,18 @@ Look at the response and copy the value of token, example shown below
    uikkdDeqMUMOqapRQJu/+vIYXPkpY5h6YbYXcfrN4xNje3
    I2B+GOBD6xJh8/8NXEJGuB4YFOju3Q==
    
+   In POSTMAN client you will see output in Raw format, if you want to view it in JSON format under the response of the POSTMAN request 
+   
+   - Click on Pretty
+   
+   - From the dropdown choose JSON
+   
+   |
+
+   .. image:: ./_static/postman_body_json.png
+
+   |
+   
 BIG-IP Login
 ````````````
 
@@ -201,12 +213,14 @@ In the output you can view the VIP/Pool/Node member status, IP address and other
    Output might differ from what you see below. Also output shown above is in JSON format
    
    In POSTMAN client you will see output in Raw format, if you want to view it in JSON format under the response of the POSTMAN request 
+   
    - Click on Pretty
+   
    - From the dropdown choose JSON
    
    |
 
-   .. image:: ./_static/postman4.png
+   .. image:: ./_static/postman_body_json.png
 
    |   
    
