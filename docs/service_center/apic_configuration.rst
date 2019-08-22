@@ -238,7 +238,9 @@ Right click on the service graph template '2ARM-Template' and click on 'Apply L4
 
 |
    
-Select the consumer and provider EPG from the dropdown list, provide contract name as shown below and click next
+Select the consumer and provider EPG from the dropdown list
+
+Provide contract name (BIGIP-VE-Standalone-Contract) and click next
 
 |
 

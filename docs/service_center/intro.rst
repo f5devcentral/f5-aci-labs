@@ -20,7 +20,17 @@ Lab environment
 
 ..
   
-- Locate the AnyConnect Credentials and use AnyConnect on your local device to connect to the lab. Your credentials will defer from what is mentioned in the screen shot
+- Locate the AnyConnect Credentials and use AnyConnect on your local device to connect to the lab. 
+
+.. note::
+
+  **Your credentials will defer from what is mentioned in the screen shot**
+  
+  If you do not have a AnyConnect hard client you can login via the browser as well. 
+  
+  - Use the Host provided above and https to that host (Example: https://dcloud-rtp-anyconnect.cisco.com)
+  
+  **Your hostname might differ from the example**
 
 - Once VPN connection is sucessful then RDP to the windows client. 
 

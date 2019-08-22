@@ -21,13 +21,13 @@ Scroll to the bottom and find the L4-L7 Service Graph parameter
 
 |
 
-Clear that field (once you hover over it you will see a X sign, click on that). The field will get cleared. Then click submit and click on Submit Changes
+- Clear that field (once you hover over it you will see a X sign, click on that). The field will get cleared. Then click submit and click on Submit Changes
 
-Check under L4-L7->Services->Deployed Graph Instance  - there is no deployed graph now
+- Check under L4-L7->Services->Deployed Graph Instance  - there is no deployed graph now
 
-Let's re-deploy it, back to the contract and subject menu. Let's assign the 2ARM-Template back to the L4-L7 Service Graph paramter
+- Go back to Tenant LAX->Contracts->Standard->BIGIP-VE-Standalone-Contract->Subject and re-deploy the graph. Assign the 2ARM-Template back to the L4-L7 Service Graph paramter and click submit
 
-Check the deployed graph instance and also the VLANs allocated under the function node. They will be different from what was assigned earlier
+- Check under L4-L7->Services->Deployed Graph Instance again then timeyou will notice the VLANs allocated under the function node. They will be different from what was assigned earlier
 
 |
 
@@ -59,7 +59,9 @@ Scroll to the bottom, you will see a warning sign next to each of the VLAN's. Ho
 
 |
 
-Next click on Manage selected, Click continue
+Next click on Manage selected, you will see a pop-up with a warning. 
+
+Click continue
 
 Change the VLAN to reflect the new VLAN in the form and click submit. In my case
 
