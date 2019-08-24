@@ -74,6 +74,18 @@ Look at the response and copy the value of token, example shown below
    uikkdDeqMUMOqapRQJu/+vIYXPkpY5h6YbYXcfrN4xNje3
    I2B+GOBD6xJh8/8NXEJGuB4YFOju3Q==
    
+   In POSTMAN client you will see output in Raw format, if you want to view it in JSON format under the response of the POSTMAN request 
+   
+   - Click on Pretty
+   
+   - From the dropdown choose JSON
+   
+   |
+
+   .. image:: ./_static/postman_body_json.png
+
+   |
+   
 BIG-IP Login
 ````````````
 
@@ -124,7 +136,7 @@ Click on the 'Visibility - VIP Table' postman request
 
 Go to the Headers tab and under the Key DevCookie put the value of the token from the APIC login request
 
-Take a look at the body of the POST. Here we are specifying the BIG-IP address as well as the partition. This is equivalent to viewing the VIP table from the visbility tab for a particualr parition on the user interface
+Have a look at the body of the POST. Here we are specifying the BIG-IP address as well as the partition. This is equivalent to viewing the VIP table from the visbility tab for a particualr parition on the user interface
 
 Click Send
 
@@ -195,6 +207,22 @@ In the output you can view the VIP/Pool/Node member status, IP address and other
         }
     }
    ]
+
+.. note::
+   
+   Output might differ from what you see below. Also output shown above is in JSON format
+   
+   In POSTMAN client you will see output in Raw format, if you want to view it in JSON format under the response of the POSTMAN request 
+   
+   - Click on Pretty
+   
+   - From the dropdown choose JSON
+   
+   |
+
+   .. image:: ./_static/postman_body_json.png
+
+   |   
    
 Get BIG-IP network information
 ``````````````````````````````

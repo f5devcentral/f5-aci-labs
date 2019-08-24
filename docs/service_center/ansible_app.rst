@@ -7,7 +7,7 @@ We will run the playbooks throught Ansible CLI to get a good understanding of ho
 
 To run this section, login to the 'tools' linux server. Open putty which is placed on the desktop. Load the tools server and open
 
-- Login with credentials: admin/C1sco12345
+- Login with credentials: root/C1sco12345
 
 - cd to directory '/root/f5aci_servicecenter_playbooks'
 
@@ -129,7 +129,7 @@ Let's add an application on the BIG-IP that contains workload that belongs to Te
 
    Also open POSTMAN go to Collection 'EndPoint Managment', go to request 'Add EndPoint SJC'
    
-   - Change the payload to 
+   - View the payload
    
      - <fvRsPathAtt tDn="topology/pod-1/paths-102/pathep-[eth1/3]" encap="vlan-2003"/> 
 	

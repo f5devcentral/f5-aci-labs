@@ -20,7 +20,17 @@ Lab environment
 
 ..
   
-- Locate the AnyConnect Credentials and use AnyConnect on your local device to connect to the lab. Your credentials will defer from what is mentioned in the screen shot
+- Locate the AnyConnect Credentials and use AnyConnect on your local device to connect to the lab. 
+
+.. note::
+
+  **Your credentials will defer from what is mentioned in the screen shot**
+  
+  If you do not have a AnyConnect hard client you can login via the browser as well. 
+  
+  - Use the Host provided above and https to that host (Example: https://dcloud-rtp-anyconnect.cisco.com)
+  
+  **Your hostname might differ from the example**
 
 - Once VPN connection is sucessful then RDP to the windows client. 
 
@@ -44,14 +54,14 @@ on the RDP client
 =========== ================ ========================== =======================================
 Name        IP               Credentials                Remarks                                      
 =========== ================ ========================== =======================================
-RDP client  192.18.133.36    username: dcloud\\demouser
+RDP client  198.18.133.36    username: dcloud\\demouser
                              password: C1sco12345
 							
-BIG-IP	    192.18.128.130   admin/admin     	        Bookmark in RDP browser
+BIG-IP	    198.18.128.130   admin/admin     	        Bookmark in RDP browser
 
-APIC        192.18.133.200   admin/C1sco12345	        Bookmark in RDP browser
+APIC        198.18.133.200   admin/C1sco12345	        Bookmark in RDP browser
 
-Linux Host  192.18.134.150   root/C1sco12345		    Session saved in Putty
+Linux Host  198.18.134.150   root/C1sco12345		    Session saved in Putty
                 
 =========== ================ ========================== =======================================
 
