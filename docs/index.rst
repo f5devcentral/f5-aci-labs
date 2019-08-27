@@ -23,7 +23,7 @@ Below are the two lab guides for each solution. If you want to run both the labs
 
 .. note::
 
-   The two guides use the same dCloud session "<<Give name>>"
+   The two guides use the same dCloud session "Cisco ACI and F5 BIG-IP Integration Solutions"
    
    Suggestion is to run each lab in a new dCloud session and not use the same session to run both the labs 
 

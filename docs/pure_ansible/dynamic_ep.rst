@@ -133,7 +133,7 @@ Click +Add button
 Click +Add button
 
 - PROMPT: 'BIG-IP Pool Port'
-- ANSWER VARIABLE NAME: 'port_name'
+- ANSWER VARIABLE NAME: 'pool_port'
 - ANSWER TYPE: 'Integer'
 - DEFAULT ANSWER: '80'
 
@@ -379,6 +379,10 @@ Go back to APIC
 
 - Tenant SJC->Application Profiles->Application EPGs->SJC-APN->Provider-EPG. Click on 'Operational' tab on the right hand side and verify endpoints deleted does not show up there.
 
+.. note::
+   
+   Make sure the end point is deleted from APIC before running the playbook again
+   
 Go to Ansible tower
 
 - Launch the playbook again. Once successful go to the BIG-IP and view the pool members under pool https-pool. You should now see 7 pool members.
@@ -402,7 +406,7 @@ Open putty which is present in the toolbar. **Load** the tools server and click 
 
 |
 
-- Login with credentials: admin/C1sco12345
+- Login with credentials: root/C1sco12345
 
 - Run command 'date' once logged in and note it down
   

@@ -21,10 +21,21 @@ Lab environment
   
   |
   
-- Locate the AnyConnect Credentials and use AnyConnect on your local device to connect to the lab. Your credentials will defer from what is mentioned in the screen shot
+- Locate the AnyConnect Credentials and use AnyConnect on your local device to connect to the lab. 
 
-- Once VPN connection is sucessful RDP to the windows client. Back to the Details section on the main session page
-  you will see the topology with various end points. Hover over each end point to locate the login credentials
+.. note::
+
+  **Your credentials will defer from what is mentioned in the screen shot**
+  
+  If you do not have a AnyConnect hard client you can login via the browser as well. 
+  
+  - Use the Host provided above and https to that host (Example: https://dcloud-rtp-anyconnect.cisco.com)
+  
+  **Your hostname might differ from the example**
+
+- Once VPN connection is sucessful then RDP to the windows client. 
+
+- Back to the Details section on the main session page you will see the topology with various end points. Hover over each end point to locate the login credentials
   
   - Hover/click over the wkst1 icon to get login credentails of the windows remote desktop
     
@@ -51,5 +62,5 @@ BIG-IP	      198.18.128.130   admin/admin     	           Bookmark in RDP browse
 
 APIC          198.18.133.200   admin/C1sco12345	           Bookmark in RDP browser
 
-Ansible Tower 198.18.134.150   admin/C1sco12345		       Bookmark in RDP Browser 'Ansible AWX'                
+Ansible Tower 198.18.134.151   admin/C1sco12345		       Bookmark in RDP Browser 'Ansible AWX'                
 ============= ================ =========================== =========================================

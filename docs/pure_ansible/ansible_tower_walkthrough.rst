@@ -48,7 +48,7 @@ Scroll down to Access and click on Organization on the left hand pane, there are
 
 | 
 
-Next lets look at the Project configured. 
+Next lets look at the Projects. 
 
 A Project is a logical collection of Ansible playbooks, represented in Tower. You can manage playbooks and playbook directories by either placing them manually under the Project Base Path on your Tower server, or by placing your playbooks into a source code management (SCM) system supported by Tower. 
 
@@ -56,16 +56,11 @@ We are going to use Git as our SCM for this lab
 
 Click on 'Project' on the left hand pane
 
-You will see two projects, click on 'demo_git_project'
+Click on the '+' sign on the top right hand corner to create a new project
 
-|
+Enter the following values:
 
-.. image:: ./_static/tower_project1.png
-
-|
-
-Under that project you will notice
-
+- Name: 'demo_git_repo'
 - Organization: 'dCloud'
 - SCM type: Git
 - SCM URL: "https://github.com/f5devcentral/f5-aci-labs.git" (All the playbooks that are placed in this Git repo will be available in Tower for the user to execute)
@@ -375,7 +370,7 @@ Click on the green 'Start' button. From the right hand pane
 - From the right hand pane choose the job template 'Configure BIG-IP Network' and click select
 - Hover over the newly added node, click on the smaller green '+' sign
 - From the right hand pane choose the job template 'Configure BIG-IP Application' and click select
-- Click Save on the button left hand corner of the screen
+- Click Save on the button right hand corner of the screen
 - Workflow has been created
 
 To verify correctness you can click on the 'Workflow visualizer' to view the workflow created
@@ -462,11 +457,11 @@ On the BIG-IP go under the following menu options and make sure there is no conf
 
 |
 
-- Local Traffic -> Virtual Server
+- Local Traffic -> Virtual Servers
 
-- Local Traffic -> Pool
+- Local Traffic -> Pools
 
-- Local Traffic -> Node
+- Local Traffic -> Nodes
 
 |
 
@@ -522,7 +517,9 @@ Login to the APIC and go to Tenant SJC-> Services -> L4-L7, you will see the fol
 
 |
 
-Expand deployed devices and go to FunctionNode. On the right hand pane under the properties section there is a scroll bar on the right hand side. Scroll to the bottom will you see the vlans
+Expand deployed devices , graph instances and go to FunctionNode. 
+
+On the right hand pane under the properties section there is a scroll bar on the right hand side. Scroll to the bottom will you see the vlans
 
 |
 
@@ -539,7 +536,7 @@ Take a note of the VLANS
 BIG-IP
 ``````
 
-Login to the BIG-IP and go to Network and Local Traffic Manager menus. View the Self-IP's/VLAN's and Virtual servies configured.
+Login to the BIG-IP and go to Network and Local Traffic Manager menus. View the Self-IP's/VLAN's and Virtual server configured.
 
 Look at the **VLANs**, the same vlan that is deployed in APIC is pushed to the BIG-IP. We did **NOT** provide any vlan information in the automation scripts. The scripts pulled the vlan information from this deployed graph and pushed it to the BIG-IP
 
