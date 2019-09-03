@@ -149,7 +149,7 @@ These are the same VLANs that we need to configure on the BIG-IP to achieve netw
 
      - Click on 'Add SELF IP' button
 	
-       - Address - 10.192.101.50
+       - Address - 10.193.101.50
 	  
        - Netmask - 255.255.255.0
 	  
