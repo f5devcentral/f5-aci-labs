@@ -30,4 +30,4 @@ If new to tower please watch the 10 minute overview before proceeding: https://w
    login.rst
    ansible_tower_walkthrough.rst
    dynamic_ep.rst
-   
+   troubleshoot.rst

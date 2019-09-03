@@ -50,3 +50,4 @@ For more details on the integration refer to https://www.f5.com/cisco
    api_postman_app.rst
    ansible_app.rst
    one_arm.rst
+   troubleshoot.rst
