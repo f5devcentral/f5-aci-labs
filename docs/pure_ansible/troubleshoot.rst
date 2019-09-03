@@ -23,11 +23,6 @@ If this error is encountered
    
   |
    
-- It will take about 10-15 seconds and then the 'Fix my Demo' window will dissapear.
+- It will take about 10-15 seconds and then the 'Fix my Demo' window will disappear.
 
 After this step you should be able to continue with the Lab execution.
-
-The previous section went through the process of creating a two-arm graph on the APIC representing a two-arm deployment model on the F5 load balancer
-
-Let's go over the difference between a one and two arm deployment model:
-
