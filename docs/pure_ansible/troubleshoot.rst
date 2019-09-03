@@ -1,4 +1,4 @@
-Troublshooting the dCloud environment
+Troubleshooting the dCloud environment
 =====================================
 
 Refresh token expired
