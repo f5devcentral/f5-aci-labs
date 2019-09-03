@@ -158,7 +158,7 @@ html_theme_path = f5_sphinx_theme.get_html_theme_path()
 # documentation.
 #
 html_theme_options = {
-    'next_prev_link': False
+    'next_prev_link': True
 }
 
 html_sidebars = {
@@ -170,12 +170,12 @@ html_sidebars = {
 # "<project> v<release> documentation" by default.
 #
 #html_title = 'F5 Container Connectors'
-html_title = 'F5 ACI Lab'
+html_title = 'F5 ACI Labs'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
 #html_short_title = 'Container Connectors Home'
-html_short_title = 'F5 ACI Lab Home'
+html_short_title = 'F5 ACI Labs Home'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -271,7 +271,7 @@ htmlhelp_basename = 'F5_ACI_Lab_doc'
 
 # -- Options for linkcheck ------------------------------------------------
 # A list of regular expressions that match URIs that should not be checked when doing a linkcheck build. Example:
-#linkcheck_ignore = [r'http://localhost:\d+/']
+linkcheck_ignore = [r'http://localhost']
 
 # The number of times the linkcheck builder will attempt to check a URL before declaring it broken. Defaults to 1 attempt.
 linkcheck_retries = 2

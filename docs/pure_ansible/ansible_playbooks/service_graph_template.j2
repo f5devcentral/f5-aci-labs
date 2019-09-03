@@ -1,0 +1,25 @@
+<vnsAbsGraph uiTemplateType="UNSPECIFIED" type="legacy" ownerTag="" ownerKey="" nameAlias="" name="2ARM-Template" dn="uni/tn-{{tenant_name}}/AbsGraph-2ARM-Template" descr="" annotation="">
+  <vnsAbsTermNodeProv ownerTag="" ownerKey="" nameAlias="" name="T2" descr="" annotation="">
+    <vnsOutTerm nameAlias="" name="" descr="" annotation=""/>
+    <vnsInTerm nameAlias="" name="" descr="" annotation=""/>
+    <vnsAbsTermConn ownerTag="" ownerKey="" nameAlias="" name="1" descr="" annotation="" attNotify="no"/>
+  </vnsAbsTermNodeProv>
+  <vnsAbsTermNodeCon ownerTag="" ownerKey="" nameAlias="" name="T1" descr="" annotation="">
+    <vnsOutTerm nameAlias="" name="" descr="" annotation=""/>
+    <vnsInTerm nameAlias="" name="" descr="" annotation=""/>
+    <vnsAbsTermConn ownerTag="" ownerKey="" nameAlias="" name="1" descr="" annotation="" attNotify="no"/>
+  </vnsAbsTermNodeCon>
+  <vnsAbsNode ownerTag="" ownerKey="" nameAlias="" name="N1" descr="" annotation="" shareEncap="no" sequenceNumber="0" routingMode="unspecified" managed="no" isCopy="no" funcType="GoTo" funcTemplateType="ADC_TWO_ARM">
+    <vnsRsNodeToLDev annotation="" tDn="uni/tn-{{tenant_name}}/lDevVip-{{logicalDeviceCluster_name}}"/>
+    <vnsAbsFuncConn ownerTag="" ownerKey="" nameAlias="" name="consumer" descr="" annotation="" attNotify="no"/>
+    <vnsAbsFuncConn ownerTag="" ownerKey="" nameAlias="" name="provider" descr="" annotation="" attNotify="no"/>
+  </vnsAbsNode>
+  <vnsAbsConnection ownerTag="" ownerKey="" nameAlias="" name="C2" descr="" annotation="" unicastRoute="yes" directConnect="no" connType="external" connDir="provider" adjType="L2">
+    <vnsRsAbsConnectionConns annotation="" tDn="uni/tn-{{tenant_name}}/AbsGraph-2ARM-Template/AbsTermNodeProv-T2/AbsTConn"/>
+    <vnsRsAbsConnectionConns annotation="" tDn="uni/tn-{{tenant_name}}/AbsGraph-2ARM-Template/AbsNode-N1/AbsFConn-provider"/>
+  </vnsAbsConnection>
+  <vnsAbsConnection ownerTag="" ownerKey="" nameAlias="" name="C1" descr="" annotation="" unicastRoute="yes" directConnect="no" connType="external" connDir="provider" adjType="L2">
+    <vnsRsAbsConnectionConns annotation="" tDn="uni/tn-{{tenant_name}}/AbsGraph-2ARM-Template/AbsNode-N1/AbsFConn-consumer"/>
+    <vnsRsAbsConnectionConns annotation="" tDn="uni/tn-{{tenant_name}}/AbsGraph-2ARM-Template/AbsTermNodeCon-T1/AbsTConn"/>
+  </vnsAbsConnection>
+</vnsAbsGraph>
